@@ -1,0 +1,20 @@
+<header class="p-2 bg-dark text-white" *ngIf="CheUserSession()">
+    <div class="container-fluid">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+            <a href="/products" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">Fashionista</a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="margin-left: 40px;">
+                <li><a routerLink="products" *ngIf="CheUserSession()" class="nav-link px-2 text-white">Products</a></li>
+                <li><a routerLink="users" *ngIf="CheckIfAdministrator() && CheUserSession()" class="nav-link px-2 text-white">List Of Users</a></li>
+                <li><a routerLink="cart" *ngIf="CheUserSession()" class="nav-link px-2 text-white">Cart Items</a></li>
+                <li><a routerLink="wishlist" *ngIf="CheUserSession()" class="nav-link px-2 text-white">Wishlist Items</a></li>
+            </ul>
+            <div class="text-end">
+                <a type="button" *ngIf="CheUserSession()" routerLink="logout" (click)="logout()" class="btn btn-outline-light me-2">Logout</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<router-outlet></router-outlet>

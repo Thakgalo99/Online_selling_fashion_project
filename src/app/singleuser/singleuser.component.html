@@ -1,0 +1,40 @@
+<div class="container" style="margin-top:50px;">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    User Details
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th>First Name</th>
+                                <td><input type="text" class="form-control" value="{{User.strFirstName}}" name="strFirstName" #strFirstName="ngModel" [(ngModel)]="User.strFirstName"
+                                    placeholder="First Name" /></td>
+                            </tr>
+                            <tr>
+                                <th> Last Name</th>
+                                <td><input type="text" class="form-control" value="{{User.strLastName}}" name="strLastName" #strLastName="ngModel" [(ngModel)]="User.strLastName"
+                                    placeholder="Last Name" /></td>
+                            </tr>
+                            <tr>
+                                <th>User Email</th>
+                                <td> <input type="text" class="form-control" value="{{User.strEmail}}" name="strEmail" #strLastName="ngModel" [(ngModel)]="User.strEmail"
+                                    placeholder="Email" /></td>
+                            </tr>
+                            <tr>
+                                <th>User Role</th>
+                                <td>  <input type="text" class="form-control" value="{{User.strUserRole}}" name="strUserRole" #strLastName="ngModel" [(ngModel)]="User.strUserRole"
+                                    placeholder="Role" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-secondary" (click)="UserEdited()">Update</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

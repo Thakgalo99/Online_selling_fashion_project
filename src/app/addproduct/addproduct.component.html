@@ -1,0 +1,47 @@
+<div class="container" style="margin-top: 50px;">
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-sm-12">
+            <div class="card shadow"> 
+                <div class="card-body">
+                    <form #custForm="ngForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label"> Name</label>
+                            <input type="text" class="form-control" name="strName" #strName="ngModel" [(ngModel)]="Product.strName"
+                                placeholder="Product Name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label"> Quantity</label>
+                            <input type="number" class="form-control" name="intQuantity" #intQuantity="ngModel" [(ngModel)]="Product.intQuantity" placeholder="Quantity"
+                                required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="number" class="form-control" name="intPrice" #intPrice="ngModel" [(ngModel)]="Product.intPrice"
+                                placeholder="Price" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="strCategory" class="form-label">Category</label>
+                            <select class="form-control" name="strCategory" #strCategory="ngModel" [(ngModel)]="Product.strCategory">
+                                <option value="general">general product</option>
+                                <option value="Accessory">Accessory</option>
+                              </select>
+                        </div>
+             
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Image Link (Please upload the link of an online image/picture)</label>
+                            <input type="text" class="form-control" name="strImage" #strImage="ngModel" [(ngModel)]="Product.strImage" placeholder="image"
+                                required />
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-4">
+                                <input type="button" value="Save"  (click)="SaveNewProduct()"  class="btn btn-secondary"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
